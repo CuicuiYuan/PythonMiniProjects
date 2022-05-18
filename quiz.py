@@ -12,44 +12,43 @@ try:
         quit()
     else:
         score = 0
+        level = score*0.75
+        answer = input("Why Python language? Answer is: A. Python is a popular programming language; B. Python is not a popular programming language; C. Python is a snake. ").lower()
+        if answer == "a" and answer !="":
+            score += 1
+        else:
+            print("Incorrect!")
 
-        answer = input("Why Python language? Answer is: ").lower()
-        if answer == "python is a popular programming language":
+        answer = input("What is a variable? Answer is: A. A variable is a container for storing data values; B. A variable is not a container for storing data values. ").lower()
+        if answer == "a" and answer !="":
             print("Correct!")
             score += 1
         else:
             print("Incorrect!")
 
-        answer = input("What is a variable? Answer is: ").lower()
-        if answer == "a variable is containers for storing data values":
-            print("Correct!")
-            score += 1
-        else:
-            print("Incorrect!")
-
-        answer = input("What does a list do? Answer is: ").lower()
-        if answer == "a list is used to store multiple items in a single variable":
+        answer = input("What does a list do? Answer is: A. A list is used to store multiple items in a single variable; B. A list is not used to store multiple items in a single variable. " ).lower()
+        if answer == "a" and answer !="":
             print("Correct!")
             score += 1
         else:
             print("Incorrect!")
         
-        answer = input("What is an array? Answer is: ").lower()
-        if answer == "an arrays is used to store multiple values in one single variable":
+        answer = input("What is an array? Answer is: A. An arrays is not used to store multiple values in one single variable; B. An arrays is used to store multiple values in one single variable. " ).lower()
+        if answer == "b" and answer !="":
             print("Correct!")
             score += 1
         else:
             print("Incorrect!")
 
-        answer = input("What is an iterator? Answer is: ").lower()
-        if answer == "an iterator is an object that contains a countable number of values":
+        answer = input("What is an iterator? Answer is: A. An iterator is an object that contains a countable number of values; B. An iterator is an object that contains a countable number of values. " ).lower()
+        if answer == "b" and answer !="":
             print("Correct!")
             score += 1
         else:
             print("Incorrect!")
-
-    if score >= int(score*0.75):
-        print("Congratulations! Your correct answer is ", score, "at least 70%. You are now leveled up!")
+    
+    if level >= int(score):
+        print("Congratulations! Your correct answer is ", score, ", at least 70%. You are now leveled up!")
     else:
         print("Your correct answer is",score, "less than 70%, come back and try again!")
 except:
